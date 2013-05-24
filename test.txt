@@ -1,8 +1,0 @@
-(dp0
-I1
-S'python'
-p1
-sI2
-S'you nedd'
-p2
-s.
