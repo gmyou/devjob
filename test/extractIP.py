@@ -3,7 +3,7 @@ import datetime
 s = datetime.datetime.now()
 print("Start : "+str(s))
 
-f = open('localhost_access_log.20121024_stats.log')
+f = open('/data/localhost_access_log.20121024_stats.log')
 w = file('ip', 'w')
 i = 0
 
@@ -19,6 +19,5 @@ w.close()
 e = datetime.datetime.now()
 print("End : "+str(e))
 
-print(
 
 print("Total. "+ str(i))
