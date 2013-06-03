@@ -34,7 +34,7 @@ def countPage(pageName):
         pageName = arr[1]
         
         if pageName in page.keys():
-            count = page[arr[1]]
+            count = page[pageName]
             count += 1          
             page[pageName]=count
         else:
