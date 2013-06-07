@@ -15,20 +15,15 @@ w = file('ir_ips_line.txt', 'w')
 i = 0
 
 for line in f:
-        if ( line.find('\t')>-1 ):
+	if ( line.find('\t')>-1 ):
                 arr = line.split('\t')
 		for ip in arr:
-			if ( bool(re.match('[0-9]', ip[:1])) ):
-				#print(ip)
-				w.write(ip)
-				w.write('\n')
-				i += 1
-        elif ( line.find('\t')>-1 ):
-		if ( bool(re.match('[0-9]', line[:1])) ):
-			print(line)
-			w.write(line)
-			w.write('\n')
-
+			if (len(ip)>6):
+				if ( bool(re.match('[0-9]', ip[:1])) ):
+					print (ip+"("+str(len(ip))+")")
+					w.write(ip)
+					w.write('\n')
+					i += 1
 f.close()
 w.close()
 
