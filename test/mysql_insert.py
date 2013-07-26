@@ -1,3 +1,5 @@
+""" ref : http://dev.mysql.com/doc/connector-python/en/myconnpy_example_cursor_transaction.html """
+
 from __future__ import print_function
 from datetime import date, datetime, timedelta
 import MySQLdb
