@@ -2,8 +2,11 @@
 import datetime
 import re
 
-#log = '/data/logs/read1/localhost_access_log.20120824.log'
-log = '/data/logs/localhost_access_log.20120824.log'
+
+logDate = '20120824'
+
+#log = '/data/logs/localhost_access_log.'+logDate+'.log'
+log = '/data/logs/read1/localhost_access_log.'+logDate+'.log'
 
 s = datetime.datetime.now()
 print("Start : "+str(s))
@@ -18,14 +21,15 @@ def extractUrl(fullUrl):
 	url = arr[0]
 	url = url.replace('/galaxy/xml/', '')
 
-	print url
+	print logDate
+	print '\t', url
 	#TODO colletioin
 
 	param =  arr[1]
 	arrParam = param.split('&')
 
 	for i, p in enumerate(arrParam):
-		print '\t', i, p
+		print '\t', '\t', i, p
 		#TODO document
 
 

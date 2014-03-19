@@ -5,8 +5,9 @@ import json
 import types
 from pymongo import MongoClient
 
+logDate = '20120824'
 #log = '/data/logs/read1/localhost_access_log.20120824.log'
-log = '/data/logs/localhost_access_log.20120824.log'
+log = '/data/logs/localhost_access_log.'+logDate+'.log'
 
 s = datetime.datetime.now()
 print("Start : "+str(s))
@@ -29,7 +30,8 @@ def extractUrl(fullUrl):
 	#TODO colletioin
 	collection = db.dummy
 
-	strJson = '{"url":"'+url+'",'
+	strJson = '{"date":"'+logDate+'",'
+	strJson += '"url":"'+url+'",'
 
 	param =  arr[1]
 	arrParam = param.split('&')
