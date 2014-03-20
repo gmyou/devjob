@@ -27,8 +27,7 @@ def extractUrl(fullUrl):
 	url = url.replace('/galaxy/xml/', '')
 
 	print url
-	#TODO colletioin
-	collection = db.dummy
+	
 
 	strJson = '{"date":"'+logDate+'",'
 	strJson += '"url":"'+url+'",'
@@ -49,28 +48,29 @@ def extractUrl(fullUrl):
 	strJson += '}'
 	print strJson
 	j = json.loads(strJson)
-	#print type(j)
+	insertData(j)
 		
-	#TODO document
-	collection.insert(j)
+def insertData(data):
+	collection = db.dummy
+	collection.insert(data)
 
 
+try:
 
+	for line in f:
+		#print "line.find('uuid=')", line.find('uuid=')
+		if ( line.find('uuid=')>-1 ):
+		    arr1 = line.split(' ')
+		    #print "line.find('appidx=')", line.find('uuid=')
+		    for i, a in enumerate(arr1):
+		    	if ( a.find('appidx=')>-1 ):
+		    		extractUrl(a)
 
-for line in f:
-	#print "line.find('uuid=')", line.find('uuid=')
-	if ( line.find('uuid=')>-1 ):
-	    arr1 = line.split(' ')
-	    #print "line.find('appidx=')", line.find('uuid=')
-	    for i, a in enumerate(arr1):
-	    	if ( a.find('appidx=')>-1 ):
-	    		extractUrl(a)
-
-
-	    
-f.close()
-w.close()
-#db connection close
+finally:
+    
+	f.close()
+	w.close()
+	#db connection close
 
 e = datetime.datetime.now()
 print("End : "+str(e))
