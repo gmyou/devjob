@@ -1,6 +1,7 @@
 #log2json.py
 import datetime
 import re
+import sys
 
 
 logDate = '20120824'
@@ -41,7 +42,7 @@ try:
 		    	if ( a.find('appidx=')>-1 ):
 		    		extractUrl(a)
 except:
-	w.write(str(e))
+	w.write(sys.exc_info()[0])
 
 finally:
 	f.close()

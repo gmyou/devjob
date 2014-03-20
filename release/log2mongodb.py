@@ -1,19 +1,23 @@
 #log2json.py
 import datetime
 import re
+import sys
 import json
 import types
 from pymongo import MongoClient
 
 logDate = '20120824'
-#log = '/data/logs/read1/localhost_access_log.20120824.log'
-log = '/data/logs/localhost_access_log.'+logDate+'.log'
+
+#log = '/data/logs/localhost_access_log.'+logDate+'.log'
+#log = '/data/logs/read1/localhost_access_log.'+logDate+'.log'
+#log = '/data/logs/read2/localhost_access_log.'+logDate+'.log'
+log = '/data/logs/read3/localhost_access_log.'+logDate+'.log'
 
 s = datetime.datetime.now()
 print("Start : "+str(s))
 
 f = open(log)
-w = file('uuid', 'w')
+w = file('log2mongodb.py.log', 'w')
 
 client = MongoClient('localhost', 27017)
 db = client.weblog
@@ -26,7 +30,7 @@ def extractUrl(fullUrl):
 	url = arr[0]
 	url = url.replace('/galaxy/xml/', '')
 
-	print url
+	#print url
 	
 
 	strJson = '{"date":"'+logDate+'",'
@@ -37,7 +41,7 @@ def extractUrl(fullUrl):
 
 	
 	for i, p in enumerate(arrParam):
-		print '\t', i, p
+		#print '\t', i, p
 		arrP = p.split('=')
 		
 		strJson += '"'+arrP[0]+'":"'+arrP[1]+'",'
@@ -46,7 +50,7 @@ def extractUrl(fullUrl):
 		strJson = strJson[:-1]
 
 	strJson += '}'
-	print strJson
+	#print strJson
 	j = json.loads(strJson)
 	insertData(j)
 		
@@ -65,6 +69,8 @@ try:
 		    for i, a in enumerate(arr1):
 		    	if ( a.find('appidx=')>-1 ):
 		    		extractUrl(a)
+except:
+	w.write(sys.exc_info()[0])
 
 finally:
     
