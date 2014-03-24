@@ -8,10 +8,10 @@ from pymongo import MongoClient
 
 logDate = '20120824'
 
-#log = '/data/logs/localhost_access_log.'+logDate+'.log'
+log = '/data/logs/localhost_access_log.'+logDate+'.log'
 #log = '/data/logs/read1/localhost_access_log.'+logDate+'.log'
 #log = '/data/logs/read2/localhost_access_log.'+logDate+'.log'
-log = '/data/logs/read3/localhost_access_log.'+logDate+'.log'
+#log = '/data/logs/read3/localhost_access_log.'+logDate+'.log'
 
 s = datetime.datetime.now()
 print("Start : "+str(s))
@@ -70,7 +70,7 @@ try:
 		    	if ( a.find('appidx=')>-1 ):
 		    		extractUrl(a)
 except:
-	w.write(sys.exc_info()[0])
+	w.write("[Error] "+str(sys.exc_info()[0]))
 
 finally:
     

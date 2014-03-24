@@ -42,7 +42,7 @@ try:
 		    	if ( a.find('appidx=')>-1 ):
 		    		extractUrl(a)
 except:
-	w.write(sys.exc_info()[0])
+	w.write("[Error] "+str(sys.exc_info()[0]))
 
 finally:
 	f.close()
