@@ -7,7 +7,7 @@ Collection Log
 
 
 	screen -S ElasticSearch
-	/usr/local/opt/elasticsearch/bin/elasticsearch -f
+	sh-3.2# j/usr/local/opt/elasticsearch/bin/elasticsearch -f
 
 	        at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.cleanup(FrameDecoder.java:482)
 	        at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.channelDisconnected(FrameDecoder.java:365)
@@ -61,3 +61,7 @@ Collection Log
 	sh-3.2# java -jar /usr/local/opt/logstash/libexec/logstash-1.3.3-flatjar.jar agent -f /usr/local/opt/logstash/logstash-shipper.conf
 
 
+			You are using a deprecated config setting "format" set in file. Deprecated settings will continue to work, but are scheduled for removal from logstash in the future. You should use the newer 'codec' setting instead. If you have any questions about this, please visit the #logstash channel on freenode irc. {:name=>"format", :plugin=><LogStash::Inputs::File --->, :level=>:warn}
+			Using milestone 2 input plugin 'file'. This plugin should be stable, but if you see strange behavior, please let us know! For more information on plugin milestones, see http://logstash.net/docs/1.3.3/plugin-milestones {:level=>:warn}
+			Using milestone 2 codec plugin 'oldlogstashjson'. This plugin should be stable, but if you see strange behavior, please let us know! For more information on plugin milestones, see http://logstash.net/docs/1.3.3/plugin-milestones {:level=>:warn}
+			Using milestone 2 output plugin 'redis'. This plugin should be stable, but if you see strange behavior, please let us know! For more information on plugin milestones, see http://logstash.net/docs/1.3.3/plugin-milestones {:level=>:warn}
