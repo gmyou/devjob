@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Slider Kit > Photos sliders</title>
+    <meta name="Keywords" content="slider, kit, slideshow, gallery, carousel, jquery plugin" />
+    <meta name="Description" content="Slider Kit jQuery slideshow plugin: photos sliders examples" />
+    
+    <!-- jQuery library -->
+    <script type="text/javascript" src="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/js/external/jquery-1.6.2.min.js"></script>
+    
+    <!-- jQuery Plugin scripts -->
+    <script type="text/javascript" src="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/js/external/jquery.easing.1.3.min.js"></script>
+    <script type="text/javascript" src="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/js/external/jquery.mousewheel.min.js"></script>
+    
+    <!-- Slider Kit scripts -->
+    <script type="text/javascript" src="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/js/sliderkit/jquery.sliderkit.1.9.2.pack.js"></script>
+
+    <!-- Slider Kit launch -->
+    <script type="text/javascript">
+      $(window).load(function(){ //$(window).load() must be used instead of $(document).ready() because of Webkit compatibility       
+        
+        
+        // Photo slider > Bullets nav
+        $(".photoslider-bullets").sliderkit({
+          auto:true,
+          circular:true,
+          mousewheel:true,
+          shownavitems:5,
+          panelfx:"sliding",
+          panelfxspeed:5000,
+          panelfxeasing:"easeOutExpo" // "easeOutExpo", "easeInOutExpo", etc.
+        });
+
+        
+      }); 
+    </script>
+    
+    <!-- Slider Kit styles -->
+    <link rel="stylesheet" type="text/css" href="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/css/sliderkit-core.css" media="screen, projection" />
+    <link rel="stylesheet" type="text/css" href="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/css/sliderkit-demos.css" media="screen, projection" />
+    
+    <!-- Slider Kit compatibility -->
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/css/sliderkit-demos-ie6.css" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/css/sliderkit-demos-ie7.css" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/css/sliderkit-demos-ie8.css" /><![endif]-->
+
+    <!-- Site styles -->
+    <link rel="stylesheet" type="text/css" href="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/css/sliderkit-site.css" media="screen, projection" />
+    
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-wrapper">
+        <div id="header-title"><a href="../sliderkit_en.html" title="SliderKit Homepage">Slider Kit, sliding contents with jQuery.</a></div>
+        <div class="spacer"></div>
+      </div>
+    </div>
+    <div id="page" class="inner layout-1col">
+      <div id="content">
+                
+        <h2>Bullets nav photo slider</h2> 
+        <p>A simple photos slider with bullets navbar (top right of the slider).</p>
+        <p><strong>Features: </strong>circular, sliding effect + easing, mousewheel control.</p>
+
+        <!-- Start photoslider-bullets -->
+        <div class="sliderkit photoslider-bullets">
+          <div class="sliderkit-nav">
+            <div class="sliderkit-nav-clip">
+              <ul>
+                <li><a href="#" title="Photo sample 01"></a></li>
+                <li><a href="#" title="Photo sample 02"></a></li>
+                <li><a href="#" title="Photo sample 03"></a></li>
+                <li><a href="#" title="Photo sample 04"></a></li>
+                <li><a href="#" title="Photo sample 05"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="sliderkit-panels">
+            <div class="sliderkit-panel">
+              <img src="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/images/photos/sample-01.jpg" alt="[Alternative text]" />
+            </div>
+            <div class="sliderkit-panel">
+              <img src="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/images/photos/sample-02.jpg" alt="[Alternative text]" />
+            </div>
+            <div class="sliderkit-panel">
+              <img src="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/images/photos/sample-03.jpg" alt="[Alternative text]" />
+            </div>
+            <div class="sliderkit-panel">
+              <img src="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/images/photos/sample-04.jpg" alt="[Alternative text]" />
+            </div>
+            <div class="sliderkit-panel">
+              <img src="http://park7965.cafe24.com/jquery.sliderkit.1.9.2/lib/images/photos/sample-05.jpg" alt="[Alternative text]" />
+            </div>
+          </div>
+        </div>
+        <!-- // end of photoslider-bullets -->
+        
+      
+      </div>
+      <div class="spacer"></div>
+    </div>
+  </body>
+</html>
