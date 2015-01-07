@@ -6,7 +6,7 @@ import re
 # Test
 print re.match(regex, line).groups()
 
-
+# From Log File
 f = open('./logs/access.log')
 # print (f.read())
 i = 0
