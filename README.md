@@ -1,6 +1,7 @@
 #Dev Job
 ======
 ##Python
+*Variable Version Setting* [https://github.com/yyuu/pyenv]
 ### Install PYENV && Edit ~/.bash_profile && source ~/.bash_profile
 	$ vim ~/.bash_profile 
 	export PYENV_ROOT="$HOME/.pyenv"
