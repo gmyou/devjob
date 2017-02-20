@@ -1,8 +1,13 @@
 #Dev Job
 ======
-##Python 2.7
+##Python
+### Install PYENV && Edit ~/.bash_profile && source ~/.bash_profile
+	$ vim ~/.bash_profile 
+	export PYENV_ROOT="$HOME/.pyenv"
+	export PATH="$PYENV_ROOT/bin:$PATH"
+	eval "$(pyenv init -)"
 
-##MySQL 5.7
+##MySQL
 change root password
 
 	UPDATE mysql.user
@@ -37,6 +42,14 @@ or
 	$ sudo rm +php-osx.conf 
 	$ sudo ln -s /usr/local/{PHP_VERSION_YOU_WANT}/entropy-php.conf +php-osx.conf
 	
+#### Change PHP-CLI Version (Not on MAMP)
+	$ brew install php70
+	$ vim ~/.bash_profile
+
+#### Add This Line on ~/.bash_profile && source ~/.bash_profile
+	#php
+	export PATH=/usr/local/Cellar/php70/7.0.15_8/bin:$PATH
+
 ##MongoDB 2.6
 ###Install
 [https://www.liquidweb.com/kb/how-to-install-mongodb-on-centos-6/]
