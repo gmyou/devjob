@@ -10,7 +10,7 @@ change root password
 	    WHERE User = 'root' AND Host = 'localhost';
 	FLUSH PRIVILEGES;
 
-##PHP 7
+##PHP
 [https://www.liquidweb.com/kb/how-to-install-the-mongodb-php-driver-extension-on-centos-6/]
 	
 	# pecl install mongo
