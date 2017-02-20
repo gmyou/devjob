@@ -1,7 +1,7 @@
 #Dev Job
 ======
 ##Python
-*Variable Version Setting* [https://github.com/yyuu/pyenv]
+[Variable Version Setting](https://github.com/yyuu/pyenv)
 ### Install PYENV && Edit ~/.bash_profile && source ~/.bash_profile
 	$ vim ~/.bash_profile 
 	export PYENV_ROOT="$HOME/.pyenv"
@@ -17,7 +17,7 @@ change root password
 	FLUSH PRIVILEGES;
 
 ##PHP
-[https://www.liquidweb.com/kb/how-to-install-the-mongodb-php-driver-extension-on-centos-6/]
+[MongoDB Driver on CentOS](https://www.liquidweb.com/kb/how-to-install-the-mongodb-php-driver-extension-on-centos-6/)
 	
 	$ pecl install mongo
 php.ini	
@@ -27,10 +27,12 @@ php.ini
 	
 	$ service httpd restart
 
+** 이하 맥환경 **
+
 ![alt text](https://gmyou71.files.wordpress.com/2017/02/e18489e185b3e1848fe185b3e18485e185b5e186abe18489e185a3e186ba-2017-02-20-e1848be185a9e18492e185ae-5-46-16.png?w=680 "MAMP에서 PHP버전 변경하기")
 
 ### Install MongoDB Driver on MAMP
-[http://lukepeters.me/blog/setting-up-mongodb-with-php-and-mamp]
+[setting-up-mongodb-with-php-and-mamp](http://lukepeters.me/blog/setting-up-mongodb-with-php-and-mamp)
 
 or 
 
@@ -53,7 +55,7 @@ or
 
 ##MongoDB 2.6
 ###Install
-[https://www.liquidweb.com/kb/how-to-install-mongodb-on-centos-6/]
+[how-to-install-mongodb-on-centos-6](https://www.liquidweb.com/kb/how-to-install-mongodb-on-centos-6/)
 ### Auth
 #### Create User
 [http://bloodguy.tistory.com/entry/MongoDB-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B4%80%EB%A6%AC-User-Administration]
