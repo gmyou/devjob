@@ -58,8 +58,8 @@ or
 [how-to-install-mongodb-on-centos-6](https://www.liquidweb.com/kb/how-to-install-mongodb-on-centos-6/)
 ### Auth
 #### Create User
-[http://bloodguy.tistory.com/entry/MongoDB-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B4%80%EB%A6%AC-User-Administration]
+[사용자 관리 (User Administration)](http://bloodguy.tistory.com/entry/MongoDB-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B4%80%EB%A6%AC-User-Administration)
 #### Auth Configuration
-[mongo.conf]
+edit `mongo.conf`
 
 	auth=ture
