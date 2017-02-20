@@ -26,7 +26,13 @@ php.ini
 ### Install MongoDB Driver on MAMP
 [http://lukepeters.me/blog/setting-up-mongodb-with-php-and-mamp]
 
+or 
 
+#### Install Not on MAMP
+	# curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
+	# brew install php56-mongo php56-memcache
+
+	
 ##MongoDB 2.6
 ###Install
 [https://www.liquidweb.com/kb/how-to-install-mongodb-on-centos-6/]
