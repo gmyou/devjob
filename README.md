@@ -11,6 +11,17 @@ change root password
 	FLUSH PRIVILEGES;
 
 ##PHP 7
+[https://www.liquidweb.com/kb/how-to-install-the-mongodb-php-driver-extension-on-centos-6/]
+	
+	# pecl install mongo
+php.ini	
+	
+	extension=mongo.so
+	
+	
+	# service httpd restart
+
+
 
 ##MongoDB 2.6
 ###Install
