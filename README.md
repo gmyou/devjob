@@ -53,6 +53,14 @@ or
 	#php
 	export PATH=/usr/local/Cellar/php70/7.0.15_8/bin:$PATH
 
+edit `/etc/apache2/httpd.conf`
+
+	#LoadModule php5_module libexec/apache2/libphp5.so
+
+*Fianly Restart Apache*
+	
+	$ sudo apachectl restart
+
 ##MongoDB 2.6
 ###Install
 [how-to-install-mongodb-on-centos-6](https://www.liquidweb.com/kb/how-to-install-mongodb-on-centos-6/)
