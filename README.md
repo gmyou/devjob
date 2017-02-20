@@ -13,3 +13,4 @@ change root password
 ##PHP 7
 
 ##MongoDB 2.6
+[https://www.liquidweb.com/kb/how-to-install-mongodb-on-centos-6/]
