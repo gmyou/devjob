@@ -1,6 +1,6 @@
-#Dev Job
+# Dev Job
 ======
-##Python
+## Python
 [Variable Version Setting](https://github.com/yyuu/pyenv)
 ### Install PYENV && Edit ~/.bash_profile && source ~/.bash_profile
 	$ vim ~/.bash_profile 
@@ -8,7 +8,7 @@
 	export PATH="$PYENV_ROOT/bin:$PATH"
 	eval "$(pyenv init -)"
 
-##MySQL
+## MySQL
 change root password
 
 	UPDATE mysql.user
@@ -16,7 +16,7 @@ change root password
 	    WHERE User = 'root' AND Host = 'localhost';
 	FLUSH PRIVILEGES;
 
-##PHP
+## PHP
 [MongoDB Driver on CentOS](https://www.liquidweb.com/kb/how-to-install-the-mongodb-php-driver-extension-on-centos-6/)
 	
 	$ pecl install mongo
